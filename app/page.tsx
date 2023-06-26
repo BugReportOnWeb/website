@@ -3,7 +3,7 @@ import { AiFillGithub, AiOutlineTwitter } from "react-icons/ai";
 
 const Home = () => {
     return (
-        <div className='flex flex-col mx-3 max-w-[40rem] pb-7 justify-center items-center gap-5 sm:flex-row-reverse sm:items-start sm:mt-0'>
+        <div className='max-w-md mx-auto flex flex-col px-3 pb-7 justify-center items-center gap-5 sm:flex-row-reverse sm:items-start sm:mt-0 sm:max-w-[40rem]'>
             <Image height={170} width={170} className='rounded-full' src='/profile.png' alt="Author's Photo" />
             <div className='sm:w-3/4'>
                 <p className='leading-7'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nunc mi, imperdiet in lacinia sed, mollis sed ipsum. Phasellus vehicula augue nec dapibus interdum. Ut diam metus, pharetra id vehicula id, consectetur vel velit. Aliquam a dolor ut tortor consectetur luctus sit amet non nulla. Morbi volutpat ornare ante ut ultrices. Nunc id dolor sollicitudin, placerat lectus et, dictum sapien. Sed lacus dolor, pulvinar vitae justo auctor, blandit gravida lacus.</p>
