@@ -19,12 +19,20 @@ const Nav = () => {
             <Link className='font-bold uppercase' href='/'>Dev Kaul</Link>
 
             <DropdownMenu>
-                <DropdownMenuTrigger><BiSolidDownArrow className='text-2xl cursor-pointer sm:hidden' onClick={() => console.log('click')} /></DropdownMenuTrigger>
+                <DropdownMenuTrigger><BiSolidDownArrow className='text-xl cursor-pointer sm:hidden' onClick={() => console.log('click')} /></DropdownMenuTrigger>
                 <DropdownMenuContent className='bg-black text-white mr-3 border-slate-600'>
-                    <DropdownMenuItem>Home</DropdownMenuItem>
-                    <DropdownMenuItem>Blog</DropdownMenuItem>
-                    <DropdownMenuItem>Project</DropdownMenuItem>
-                    <DropdownMenuItem>Contact</DropdownMenuItem>
+                    <Link href='/' className={pathname == '/' ? 'font-bold' : 'font-light'}>
+                        <DropdownMenuItem>Home</DropdownMenuItem>
+                    </Link>
+                    <Link href='/blog' className={pathname == '/blog' ? 'font-bold' : 'font-light'}>
+                        <DropdownMenuItem>Blog</DropdownMenuItem>
+                    </Link>
+                    <Link href='/project' className={pathname == '/project' ? 'font-bold' : 'font-light'}>
+                        <DropdownMenuItem>Project</DropdownMenuItem>
+                    </Link>
+                    <Link href='/contact' className={pathname == '/contact' ? 'font-bold' : 'font-light'}>
+                        <DropdownMenuItem>Contact</DropdownMenuItem>
+                    </Link>
                 </DropdownMenuContent>
             </DropdownMenu>
 
