@@ -21,16 +21,16 @@ const Nav = () => {
             <DropdownMenu>
                 <DropdownMenuTrigger><BiSolidDownArrow className='text-xl cursor-pointer sm:hidden' onClick={() => console.log('click')} /></DropdownMenuTrigger>
                 <DropdownMenuContent className='bg-black text-white mr-3 border-slate-600'>
-                    <Link href='/' className={pathname == '/' ? 'font-bold' : 'font-light'}>
+                    <Link href='/' className={pathname == '/' ? 'font-bold' : 'text-slate-400'}>
                         <DropdownMenuItem>Home</DropdownMenuItem>
                     </Link>
-                    <Link href='/blog' className={pathname == '/blog' ? 'font-bold' : 'font-light'}>
+                    <Link href='/blog' className={pathname == '/blog' ? 'font-bold' : 'text-slate-400'}>
                         <DropdownMenuItem>Blog</DropdownMenuItem>
                     </Link>
-                    <Link href='/project' className={pathname == '/project' ? 'font-bold' : 'font-light'}>
+                    <Link href='/project' className={pathname == '/project' ? 'font-bold' : 'text-slate-400'}>
                         <DropdownMenuItem>Project</DropdownMenuItem>
                     </Link>
-                    <Link href='/contact' className={pathname == '/contact' ? 'font-bold' : 'font-light'}>
+                    <Link href='/contact' className={pathname == '/contact' ? 'font-bold' : 'text-slate-400'}>
                         <DropdownMenuItem>Contact</DropdownMenuItem>
                     </Link>
                 </DropdownMenuContent>
