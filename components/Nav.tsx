@@ -20,27 +20,27 @@ const Nav = () => {
 
             <DropdownMenu>
                 <DropdownMenuTrigger><BiSolidDownArrow className='text-xl cursor-pointer sm:hidden' onClick={() => console.log('click')} /></DropdownMenuTrigger>
-                <DropdownMenuContent className='bg-black text-white mr-3 border-slate-600'>
-                    <Link href='/' className={pathname == '/' ? 'font-bold' : 'text-slate-400'}>
+                <DropdownMenuContent className='bg-black text-[#ededed] mr-3 border-slate-600'>
+                    <Link href='/' className={pathname == '/' ? 'text-[#ededed]' : 'text-slate-500'}>
                         <DropdownMenuItem>Home</DropdownMenuItem>
                     </Link>
-                    <Link href='/blog' className={pathname == '/blog' ? 'font-bold' : 'text-slate-400'}>
+                    <Link href='/blog' className={pathname == '/blog' ? 'text-[#ededed]' : 'text-slate-500'}>
                         <DropdownMenuItem>Blog</DropdownMenuItem>
                     </Link>
-                    <Link href='/project' className={pathname == '/project' ? 'font-bold' : 'text-slate-400'}>
+                    <Link href='/project' className={pathname == '/project' ? 'text-[#ededed]' : 'text-slate-500'}>
                         <DropdownMenuItem>Project</DropdownMenuItem>
                     </Link>
-                    <Link href='/contact' className={pathname == '/contact' ? 'font-bold' : 'text-slate-400'}>
+                    <Link href='/contact' className={pathname == '/contact' ? 'text-[#ededed]' : 'text-slate-500'}>
                         <DropdownMenuItem>Contact</DropdownMenuItem>
                     </Link>
                 </DropdownMenuContent>
             </DropdownMenu>
 
             <ul className='items-center text-sm hidden sm:flex gap-5 '>
-                <Link className={`${pathname === '/' ? 'text-white' : 'text-gray-500'} cursor-pointer transition-colors ease-in-out hover:text-white`} href='/'>Home</Link>
-                <Link className={`${pathname === '/blog' ? 'text-white' : 'text-gray-500'} cursor-pointer transition-colors ease-in-out hover:text-white`} href='/blog'>Blog</Link>
-                <Link className={`${pathname === '/project' ? 'text-white' : 'text-gray-500'} cursor-pointer transition-colors ease-in-out hover:text-white`} href='/project'>Project</Link>
-                <Link className={`${pathname === '/contact' ? 'text-white' : 'text-gray-500'} cursor-pointer transition-colors ease-in-out hover:text-white`} href='/contact'>Contact</Link>
+                <Link className={`${pathname === '/' ? 'text-[#ededed]' : 'text-gray-500'} cursor-pointer transition-colors ease-in-out hover:text-[#ededed]`} href='/'>Home</Link>
+                <Link className={`${pathname === '/blog' ? 'text-[#ededed]' : 'text-gray-500'} cursor-pointer transition-colors ease-in-out hover:text-[#ededed]`} href='/blog'>Blog</Link>
+                <Link className={`${pathname === '/project' ? 'text-[#ededed]' : 'text-gray-500'} cursor-pointer transition-colors ease-in-out hover:text-[#ededed]`} href='/project'>Project</Link>
+                <Link className={`${pathname === '/contact' ? 'text-[#ededed]' : 'text-gray-500'} cursor-pointer transition-colors ease-in-out hover:text-[#ededed]`} href='/contact'>Contact</Link>
             </ul>
         </div>
     )
