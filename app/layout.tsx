@@ -1,8 +1,11 @@
 import './globals.css'
-import { Inter } from 'next/font/google'
+import { Rubik } from 'next/font/google'
 import Nav from '@/components/Nav';
 
-const inter = Inter({ subsets: ['latin'] })
+const rubik = Rubik({
+    subsets: ['latin'],
+    weight: ['400', '500', '600', '700'],
+})
 
 export const metadata = {
   title: 'Dev Kaul',
@@ -16,7 +19,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={rubik.className}>
         <div className='relative max-w-5xl h-screen mx-auto'>
             <Nav />
             <div className='h-full pt-20 sm:flex sm:justify-center sm:items-center sm:mt-0'>
