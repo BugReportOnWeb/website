@@ -27,9 +27,6 @@ const Nav = () => {
                     <Link href='/blog' className={pathname == '/blog' ? 'text-[#ededed]' : 'text-slate-500'}>
                         <DropdownMenuItem>Blog</DropdownMenuItem>
                     </Link>
-                    <Link href='/project' className={pathname == '/project' ? 'text-[#ededed]' : 'text-slate-500'}>
-                        <DropdownMenuItem>Project</DropdownMenuItem>
-                    </Link>
                     <Link href='/contact' className={pathname == '/contact' ? 'text-[#ededed]' : 'text-slate-500'}>
                         <DropdownMenuItem>Contact</DropdownMenuItem>
                     </Link>
@@ -39,7 +36,6 @@ const Nav = () => {
             <ul className='items-center text-sm hidden sm:flex gap-5 '>
                 <Link className={`${pathname === '/' ? 'text-[#ededed]' : 'text-gray-500'} cursor-pointer transition-colors ease-in-out hover:text-[#ededed]`} href='/'>Home</Link>
                 <Link className={`${pathname === '/blog' ? 'text-[#ededed]' : 'text-gray-500'} cursor-pointer transition-colors ease-in-out hover:text-[#ededed]`} href='/blog'>Blog</Link>
-                <Link className={`${pathname === '/project' ? 'text-[#ededed]' : 'text-gray-500'} cursor-pointer transition-colors ease-in-out hover:text-[#ededed]`} href='/project'>Project</Link>
                 <Link className={`${pathname === '/contact' ? 'text-[#ededed]' : 'text-gray-500'} cursor-pointer transition-colors ease-in-out hover:text-[#ededed]`} href='/contact'>Contact</Link>
             </ul>
         </div>
