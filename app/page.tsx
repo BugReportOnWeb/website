@@ -1,8 +1,6 @@
 import Image from "next/image";
 import { AiFillGithub, AiOutlineTwitter } from "react-icons/ai";
 
-
-
 const Home = () => {
     return (
         <div className='max-w-md mx-auto flex flex-col px-3 pb-7 justify-center items-center gap-5 sm:flex-row-reverse sm:items-start sm:mt-0 sm:max-w-[40rem]'>
