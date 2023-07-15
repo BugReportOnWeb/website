@@ -22,9 +22,7 @@ export default function RootLayout({
       <body className={rubik.className}>
         <div className='relative max-w-5xl h-screen mx-auto'>
             <Nav />
-            <div className='h-full pt-20 sm:flex sm:justify-center sm:items-center sm:mt-0'>
-                {children}
-            </div>
+            {children}
         </div>
       </body>
     </html>
