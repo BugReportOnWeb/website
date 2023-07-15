@@ -1,8 +1,8 @@
 import './globals.css'
-import { Rubik } from 'next/font/google'
+import { Inter } from 'next/font/google'
 import Nav from '@/components/Nav';
 
-const rubik = Rubik({
+const inter = Inter({
     subsets: ['latin'],
     weight: ['400', '500', '600', '700'],
 })
@@ -19,7 +19,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={rubik.className}>
+      <body className={inter.className}>
         <div className='relative max-w-5xl h-screen mx-auto'>
             <Nav />
             {children}
