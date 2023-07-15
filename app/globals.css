@@ -3,12 +3,18 @@
 @tailwind utilities;
 
 :root {
-    --foreground-rgb: 237, 237, 237;
-    --background-start-rgb: 0, 0, 0;
-    --background-middle-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --foreground-hsl: 213 31% 91%;
+    --background-start-hsl: 224 71% 4%;
+    --background-middle-hsl: 224 71% 4%;
+    --background-end-hsl: 224 71% 4%;
 
-    /* Grey and light wihte theme */
+    /* Black and White Theme */
+    /* --foreground-rgb: 237, 237, 237; */
+    /* -background-start-rgb: 0, 0, 0; */
+    /* -background-middle-rgb: 0, 0, 0; */
+    /* -background-end-rgb: 0, 0, 0; */
+
+    /* Grey and Light-white Theme */
     /* --foreground-rgb: 229, 229, 229; */
     /* --background-start-rgb: 26, 26, 26; */
     /* --background-middle-rgb: 23, 23, 23; */
@@ -21,12 +27,12 @@ body {
 }
 
 body {
-    color: rgb(var(--foreground-rgb));
-    background: rgb(var(--background-start-rgb));
+    color: hsl(var(--foreground-hsl));
+    background: hsl(var(--background-start-hsl));
     background: linear-gradient(
         to bottom,
-        rgb(var(--background-start-rgb)),
-        rgb(var(--background-middle-rgb)),
-        rgb(var(--background-end-rgb))
+        hsl(var(--background-start-hsl)),
+        hsl(var(--background-middle-hsl)),
+        hsl(var(--background-end-hsl))
     );
 }
