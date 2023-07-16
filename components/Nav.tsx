@@ -20,7 +20,7 @@ const Nav = () => {
 
             <DropdownMenu>
                 <DropdownMenuTrigger><BiSolidDownArrow className='text-xl cursor-pointer sm:hidden' onClick={() => console.log('click')} /></DropdownMenuTrigger>
-                <DropdownMenuContent className='bg-black text-[#ededed] mr-3 border-slate-600'>
+                <DropdownMenuContent className='bg-black text-[#ededed] mr-7 mt-4 border-slate-600 scale-125'>
                     <Link href='/' className={pathname == '/' ? 'text-[#ededed]' : 'text-slate-500'}>
                         <DropdownMenuItem>Home</DropdownMenuItem>
                     </Link>
