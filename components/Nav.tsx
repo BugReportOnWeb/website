@@ -15,7 +15,7 @@ const Nav = () => {
     const pathname = usePathname();
 
     return (
-        <div className='absolute top-0 left-0 right-0 p-3 mt-1 flex justify-between items-center'>
+        <div className='absolute top-0 left-0 right-0 px-5 py-6 flex justify-between items-center'>
             <Link className='font-bold uppercase' href='/'>Dev Kaul</Link>
 
             <DropdownMenu>
