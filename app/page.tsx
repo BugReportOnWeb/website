@@ -4,7 +4,7 @@ import { AiFillGithub, AiOutlineTwitter } from "react-icons/ai";
 
 const Home = () => {
     return (
-        <div className='h-full pt-[6.75rem] sm:flex sm:justify-center sm:items-center sm:pt-5'>
+        <div className='h-full pt-[6.75rem] sm:flex sm:justify-center sm:items-center sm:pt-0'>
             <div className='relative max-w-sm mx-auto flex flex-col px-5 pb-7 justify-center items-center gap-8 sm:static sm:flex-row-reverse sm:items-start sm:pb-0 sm:max-w-2xl sm:gap-5'>
                 <Image height={170} width={170} className='rounded-full' src='/profile.png' alt="Author's Photo" priority />
                 <div className='sm:w-4/5'>
