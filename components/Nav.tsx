@@ -19,8 +19,10 @@ const Nav = () => {
             <Link className='font-bold uppercase' href='/'>Dev Kaul</Link>
 
             <DropdownMenu>
-                <DropdownMenuTrigger><BiSolidDownArrow className='text-xl cursor-pointer sm:hidden' onClick={() => console.log('click')} /></DropdownMenuTrigger>
-                <DropdownMenuContent className='bg-black mr-7 mt-4 border-[#e1e7ef]/20 scale-110'>
+                <DropdownMenuTrigger className='group'>
+                    <BiSolidDownArrow className='group-data-[state=open]:rotate-180 transition-rotate duration-200 text-xl cursor-pointer sm:hidden' />
+                </DropdownMenuTrigger>
+                <DropdownMenuContent className='bg-black mr-7 mt-2.5 border-[#e1e7ef]/20 scale-110'>
                     <Link href='/' className={pathname == '/' ? 'text-[#e1e7ef]' : 'text-[#e1e7ef]/60'}>
                         <DropdownMenuItem>Home</DropdownMenuItem>
                     </Link>
