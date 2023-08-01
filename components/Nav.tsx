@@ -20,7 +20,7 @@ const Nav = () => {
 
             <DropdownMenu>
                 <DropdownMenuTrigger className='group'>
-                    <BiSolidDownArrow className='group-data-[state=open]:rotate-180 transition-rotate duration-200 text-xl cursor-pointer sm:hidden' />
+                    <BiSolidDownArrow className='group-data-[state=open]:rotate-180 transition-rotate duration-300 text-xl cursor-pointer sm:hidden' />
                 </DropdownMenuTrigger>
                 <DropdownMenuContent className='bg-black mr-7 mt-2.5 border-[#e1e7ef]/20 scale-110'>
                     <Link href='/' className={pathname == '/' ? 'text-[#e1e7ef]' : 'text-[#e1e7ef]/60'}>
