@@ -1,6 +1,7 @@
 import { FaTelegramPlane, FaDiscord } from 'react-icons/fa';
 import { BsFillChatDotsFill } from 'react-icons/bs';
 import { BiSolidRightArrow } from 'react-icons/bi';
+import Footer from '@/components/Footer';
 
 const Contact = () => {
     return (
@@ -22,6 +23,7 @@ const Contact = () => {
                     <button type='submit' className='mx-auto bg-[#f8fafc] font-medium text-[#020205] w-full h-10 rounded-md flex justify-center items-center cursor-pointer transition-colors ease-in-out hover:bg-[#f8fafc]/90'>Send Email</button>
                 </div>
             </div>
+            <Footer component='contact' />
         </div>
     )
 }
