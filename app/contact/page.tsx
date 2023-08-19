@@ -19,6 +19,8 @@ const Contact = () => {
     const [message, setMessage] = useState<string>('');
     const [usernameCopied, setUsernameCopied] = useState<boolean>(false);
 
+    const EMAIL = process.env.NEXT_PUBLIC_EMAIL;
+
     const sendMail = (e: ChangeEvent<HTMLFormElement>) => {
         e.preventDefault();
 
@@ -54,7 +56,7 @@ const Contact = () => {
                 </div>
 
                 <form onSubmit={sendMail} className='w-full flex flex-col justify-center gap-5'>
-                    <h1 className='text-start flex items-center'><BiSolidRightArrow className='mr-2' />devasheeshkaul@gmail.com</h1>
+                    <a href={`mailto:${EMAIL}`} className='w-fit text-start flex items-center'><BiSolidRightArrow className='mr-2' />{EMAIL}</a>
                     <input type='text' onChange={e => setName(e.target.value)} value={name} className='rounded-md bg-inherit border border-[#242F2B] py-2 px-3 text-sm w-full h-10 outline-white outline-offset-2 focus:outline focus:outline-2' placeholder='Name' />
                     <input type='email' onChange={e => setEmail(e.target.value)} value={email} className='rounded-md bg-inherit border border-[#242F2B] py-2 px-3 text-sm w-full h-10 outline-white outline-offset-2 focus:outline focus:outline-2' placeholder='Email Address' />
                     <textarea onChange={e => setMessage(e.target.value)} value={message} className='rounded-md bg-inherit border border-[#242F2B] py-2 px-3 text-sm w-full h-40 outline-white outline-offset-2 focus:outline focus:outline-2' placeholder='Type your message here.' />
