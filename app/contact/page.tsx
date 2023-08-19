@@ -27,11 +27,9 @@ const Contact = () => {
                         <h1 className={`absolute text-[0.85rem] w-full top-0 left-1/2 -translate-x-1/2 -translate-y-[150%] transition-opacity duration-300 ease-in-out ${usernameCopied ? 'opacity-1' : 'opacity-0'}`}>Username copied!</h1>
                     </button>
                 </div>
-
                 <div className='relative w-full border border-[#242F2B]'>
                     <div className='absolute border border border-[#242F2B] flex justify-center items-center px-3 py-1 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-xl text-xs text-white/70 bg-black'>OR</div>
                 </div>
-
                 <ContactForm />
             </div>
             <Footer component='contact' />

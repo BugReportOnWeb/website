@@ -1,7 +1,7 @@
 import { ChangeEvent, useState } from 'react';
 import { BiSolidRightArrow } from 'react-icons/bi';
 
-type Person = {
+type MailData = {
     name: string,
     email: string,
     message: string
@@ -17,9 +17,9 @@ const ContactForm = () => {
     const sendMail = (e: ChangeEvent<HTMLFormElement>) => {
         e.preventDefault();
 
-        const person: Person = { name, email, message };
+        const data: MailData = { name, email, message };
         // TODO: Add functionality for sending mail
-        console.log(person);
+        console.log(data);
 
         setName('');
         setEmail('');
