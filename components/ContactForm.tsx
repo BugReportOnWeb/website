@@ -3,7 +3,7 @@ import { BiSolidRightArrow } from 'react-icons/bi';
 import { FormData } from '@/types/FormData';
 
 const ContactForm = () => {
-    const[formData, setFormData] = useState<FormData>({
+    const [formData, setFormData] = useState<FormData>({
         name: "",
         email: "",
         message: ""
@@ -17,7 +17,7 @@ const ContactForm = () => {
             [e.target.name]: e.target.value
         }))
     }
-    
+
     const sendMail = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
@@ -37,9 +37,29 @@ const ContactForm = () => {
     return (
         <form onSubmit={sendMail} className='w-full flex flex-col justify-center gap-5'>
             <a href={`mailto:${EMAIL}`} className='w-fit text-start flex items-center'><BiSolidRightArrow className='mr-2' />{EMAIL}</a>
-            <input type='text' name="name" onChange={handleChange} value={formData.name} className='rounded-md bg-inherit border border-[#242F2B] py-2 px-3 text-sm w-full h-10 outline-white outline-offset-2 focus:outline focus:outline-2' placeholder='Name' />
-            <input type='email' name="email" onChange={handleChange} value={formData.email} className='rounded-md bg-inherit border border-[#242F2B] py-2 px-3 text-sm w-full h-10 outline-white outline-offset-2 focus:outline focus:outline-2' placeholder='Email Address' />
-            <textarea name="message" onChange={handleChange} value={formData.message} className='rounded-md bg-inherit border border-[#242F2B] py-2 px-3 text-sm w-full h-40 outline-white outline-offset-2 focus:outline focus:outline-2' placeholder='Type your message here.' />
+            <input
+                type='text'
+                name='name'
+                onChange={handleChange}
+                value={formData.name}
+                className='rounded-md bg-inherit border border-[#242F2B] py-2 px-3 text-sm w-full h-10 outline-white outline-offset-2 focus:outline focus:outline-2'
+                placeholder='Name'
+            />
+            <input
+                type='email' 
+                name='email' 
+                onChange={handleChange} 
+                value={formData.email} 
+                className='rounded-md bg-inherit border border-[#242F2B] py-2 px-3 text-sm w-full h-10 outline-white outline-offset-2 focus:outline focus:outline-2'
+                placeholder='Email Address'
+            />
+            <textarea 
+                name='message'
+                onChange={handleChange}
+                value={formData.message}
+                className='rounded-md bg-inherit border border-[#242F2B] py-2 px-3 text-sm w-full h-40 outline-white outline-offset-2 focus:outline focus:outline-2'
+                placeholder='Type your message here.'
+            />
             <button type='submit' className='mx-auto bg-[#f8fafc] font-medium text-[#020205] w-full h-10 rounded-md flex justify-center items-center cursor-pointer transition-colors ease-in-out hover:bg-[#f8fafc]/90'>Send Email</button>
         </form>
     )
