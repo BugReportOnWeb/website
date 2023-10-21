@@ -2,12 +2,14 @@ import { ChangeEvent, FormEvent, useState } from 'react';
 import { BiSolidRightArrow } from 'react-icons/bi';
 import { FormData } from '@/types/FormData';
 
+const defaultFormData = {
+    name: "",
+    email: "",
+    message: ""
+}
+
 const ContactForm = () => {
-    const [formData, setFormData] = useState<FormData>({
-        name: "",
-        email: "",
-        message: ""
-    });
+    const [formData, setFormData] = useState<FormData>(defaultFormData);
 
     const EMAIL = process.env.NEXT_PUBLIC_EMAIL;
 
@@ -15,7 +17,7 @@ const ContactForm = () => {
         setFormData(prevData => ({
             ...prevData,
             [e.target.name]: e.target.value
-        }))
+        }));
     }
 
     const sendMail = (e: FormEvent<HTMLFormElement>) => {
@@ -27,11 +29,7 @@ const ContactForm = () => {
 
         // TODO: Find another way to encapsulate this default form data value
         // DESC: Used for reseting and assigning as default in state
-        setFormData({
-            name: "",
-            email: "",
-            message: ""
-        })
+        setFormData(defaultFormData);
     }
 
     return (
@@ -46,14 +44,14 @@ const ContactForm = () => {
                 placeholder='Name'
             />
             <input
-                type='email' 
-                name='email' 
-                onChange={handleChange} 
-                value={formData.email} 
+                type='email'
+                name='email'
+                onChange={handleChange}
+                value={formData.email}
                 className='rounded-md bg-inherit border border-[#242F2B] py-2 px-3 text-sm w-full h-10 outline-white outline-offset-2 focus:outline focus:outline-2'
                 placeholder='Email Address'
             />
-            <textarea 
+            <textarea
                 name='message'
                 onChange={handleChange}
                 value={formData.message}
