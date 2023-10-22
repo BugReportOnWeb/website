@@ -2,6 +2,10 @@ import { ChangeEvent, FormEvent, useState } from 'react';
 import { BiSolidRightArrow } from 'react-icons/bi';
 import { FormData } from '@/types/FormData';
 
+const EMAIL = process.env.NEXT_PUBLIC_EMAIL;
+const env = process.env.NODE_ENV;
+
+// CHECK: Storage for constant values?
 const defaultFormData = {
     name: "",
     email: "",
@@ -10,8 +14,7 @@ const defaultFormData = {
 
 const ContactForm = () => {
     const [formData, setFormData] = useState<FormData>(defaultFormData);
-
-    const EMAIL = process.env.NEXT_PUBLIC_EMAIL;
+    const [loading, setLoading] = useState(false);
 
     const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         setFormData(prevData => ({
@@ -20,15 +23,31 @@ const ContactForm = () => {
         }));
     }
 
-    const sendMail = (e: FormEvent<HTMLFormElement>) => {
+    const sendMail = async (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
+        setLoading(true);
 
-        // TODO: Add checker for empty values inside form
-        // TODO: Add functionality for sending mail
-        console.log(formData);
+        // CHECK: Right way to do 'dev' vs 'prod'?
+        try {
+            const res = await fetch(env == 'development'
+                ? `http://localhost:3000/api/send`
+                : `https://devkaul.vercel.app/api/send`, {
+                method: 'POST',
+                headers: { "Content-Type": "application/json", },
+                body: JSON.stringify(formData)
+            })
 
-        // TODO: Find another way to encapsulate this default form data value
-        // DESC: Used for reseting and assigning as default in state
+            const data = await res.json();
+
+            // TODO/CHECK: Do something useful with these consoles (if necessary)
+            console.log(data);
+        } catch (error) {
+            console.log(error);
+        } finally {
+            setLoading(false);
+        }
+
+        // TODO: Add loading state for resend api
         setFormData(defaultFormData);
     }
 
@@ -40,25 +59,31 @@ const ContactForm = () => {
                 name='name'
                 onChange={handleChange}
                 value={formData.name}
-                className='rounded-md bg-inherit border border-[#242F2B] py-2 px-3 text-sm w-full h-10 outline-white outline-offset-2 focus:outline focus:outline-2'
+                required
+                maxLength={500}
                 placeholder='Name'
+                className='rounded-md bg-inherit border border-[#242F2B] py-2 px-3 text-sm w-full h-10 outline-white outline-offset-2 focus:outline focus:outline-2'
             />
             <input
                 type='email'
                 name='email'
                 onChange={handleChange}
                 value={formData.email}
-                className='rounded-md bg-inherit border border-[#242F2B] py-2 px-3 text-sm w-full h-10 outline-white outline-offset-2 focus:outline focus:outline-2'
+                required
+                maxLength={500}
                 placeholder='Email Address'
+                className='rounded-md bg-inherit border border-[#242F2B] py-2 px-3 text-sm w-full h-10 outline-white outline-offset-2 focus:outline focus:outline-2'
             />
             <textarea
                 name='message'
                 onChange={handleChange}
                 value={formData.message}
-                className='rounded-md bg-inherit border border-[#242F2B] py-2 px-3 text-sm w-full h-40 outline-white outline-offset-2 focus:outline focus:outline-2'
+                required
+                maxLength={5000}
                 placeholder='Type your message here.'
+                className='rounded-md bg-inherit border border-[#242F2B] py-2 px-3 text-sm w-full h-40 outline-white outline-offset-2 focus:outline focus:outline-2'
             />
-            <button type='submit' className='mx-auto bg-[#f8fafc] font-medium text-[#020205] w-full h-10 rounded-md flex justify-center items-center cursor-pointer transition-colors ease-in-out hover:bg-[#f8fafc]/90'>Send Email</button>
+            <button type='submit' disabled={loading} className='mx-auto bg-[#f8fafc] font-medium text-[#020205] w-full h-10 rounded-md flex justify-center items-center cursor-pointer transition-colors ease-in-out hover:bg-[#f8fafc]/90 disabled:cursor-wait'>Send Email</button>
         </form>
     )
 }
