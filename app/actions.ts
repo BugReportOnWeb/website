@@ -25,9 +25,10 @@ const sendMail = async (formData: FormData) => {
             text: newMessage,
         })
 
-        return { res };
+        // TODO: Do something usefull with error catching
+        console.log(res);
     } catch (error) {
-        return { error };
+        console.log(error);
     }
 }
 
