@@ -1,7 +1,7 @@
 ---
 title: 'Hello World!'
 date: '2023-09-12'
-description: 'Here, I enter the space with my very first blog, where thoughts play the game. Yay! Watch out, though; there could be someone hiding there'
+description: 'Here, I enter the space with my very first blog, where thoughts play the game. Yay! Watch out, though; there could be someone hiding there.'
 time: '03:45 am'
 ---
 
