@@ -30,7 +30,7 @@ const getAllBlogIds = () => {
     const fileNames = fs.readdirSync(blogsDirectoryPath);
 
     const blogIds = fileNames.map(fileName => {
-        const id = fileName.replace('/\.md$/', '');
+        const id = fileName.replace(/\.md$/, '');
         return { id };
     })
 
