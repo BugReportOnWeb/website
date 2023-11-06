@@ -1,5 +1,5 @@
 // import Footer from "@/components/Footer";
-import getSortedBlogsMetaData from "@/lib/blogs";
+import { getSortedBlogsMetaData } from "@/lib/blogs";
 import Link from "next/link";
 
 // Possible other colors (hover: lighter -> darker):
@@ -8,14 +8,14 @@ import Link from "next/link";
 // #050D17
 // #040C14
 
-const Blog = () => {
+const Blogs = () => {
     const blogsMetaData = getSortedBlogsMetaData();
 
     return (
         <div className='h-full flex justify-center'>
             <div className='max-w-4xl absolute mt-20 px-5 pt-5 pb-10 flex flex-col justify-center items-center gap-[1.85rem] sm:gap-11 sm:pt-10'>
                 {blogsMetaData.map((metaData, index) => (
-                    <Link href='/' key={index} className='w-full p-6 border border-[#27272A] rounded-lg flex flex-col justify-center items-start gap-3 sm:p-10 hover:bg-[#050F19]'>
+                    <Link href={`/blog/${metaData.id}`} key={index} className='w-full p-6 border border-[#27272A] rounded-lg flex flex-col justify-center items-start gap-3 sm:p-10 hover:bg-[#050F19]'>
                         <div>
                             <h1 className='font-bold text-2xl text-[#ededed]'>{metaData.title}</h1>
                             <h1 className='text-xs mt-[0.425rem] text-[#ededed]/40'>{metaData.date}</h1>
@@ -29,4 +29,4 @@ const Blog = () => {
     )
 }
 
-export default Blog;
+export default Blogs;
