@@ -3,6 +3,8 @@ import path from 'path';
 
 import matter from 'gray-matter';
 import { MetaData } from '@/types/Blog';
+import { remark } from 'remark';
+import html from 'remark-html';
 
 const blogsDirectoryPath = path.join(process.cwd(), 'blogs');
 
@@ -46,8 +48,24 @@ const getBlogMetaData = (id: string) => {
     return blogMetaData;
 }
 
-export { 
+const getBlogContent = async (id: string) => {
+    const filePath = path.join(blogsDirectoryPath, `${id}.md`);
+    const fileContent = fs.readFileSync(filePath, 'utf8');
+
+    const matterContent = matter(fileContent).content;
+
+    const rawContent = await remark()
+        .use(html)
+        .process(matterContent)
+
+    const htmlContent = rawContent.toString();
+
+    return { htmlContent };
+}
+
+export {
     getSortedBlogsMetaData,
     getAllBlogIds,
-    getBlogMetaData
+    getBlogMetaData,
+    getBlogContent
 };
