@@ -5,7 +5,7 @@ description: 'Here, I enter the space with my very first blog, where thoughts pl
 time: '03:45 am'
 ---
 
-What could be a better way to greet you all? Welcome to my first blog! This is where it all starts, probably would end somewhere down the line, can\'t see, can\'t take into notice, but whenever it may be, it\'s surely gonna be a blast ;)
+What could be a better way to greet you all? Welcome to my first blog! This is where it all starts, probably would end somewhere down the line, can\'t see, can\'t take into notice, but whenever it may be, it\'s sure to be a blast! ;)
 
 As this is my very first blog, I\'ll try to keep it short. Some of the things I\'d like to discuss are what you can expect from these blogs and what else I have in my mind for the curve to take a shape as it goes.
 
@@ -29,10 +29,10 @@ Other than that, maybe I\'d like to have a special place for all of them. Who ar
 
 ### Now what?
 
-If I knew the answer to that, it wouldn\'t have taken me ages to get to this threshold that could have been a day\'s long journey. Yes, that\'s ME, hurray! \**sobs in the corner*\* But yeah it\'s gonna be a way to a new call, one that has been poking me for a long time. At least that would be something to keep by the side instead of letting it slip away, as I often do..
+If I knew the answer to that, it wouldn\'t have taken me ages to get to this threshold that could have been a day\'s long journey. Yes, that\'s ME, hurray! \**sobs in the corner*\* But yeah it\'s gonna be a way to a new call, one that has been poking me for a long time. At least that would be something to keep by the side instead of letting it slip away, as I often do.
 
 The steps are unknown, but so is life, isn\'t it? Maybe it would turn itself into an enormous blacked out machine, or perhaps just a relatively modest mini by the end. But both are fine in my opinion, as long as it functions as intended. Did you get all of that? I can already see it go...
 
 &nbsp;
 
-So, that\'s all for now I guess. Writing all of this was fun, and I hope to not destroy this way before I could have a change to be greeted by the curtains itself! Come one guys, you know it all, there\'s no need to downplay it this early ;) On that note, I\'ll end my talk here. Until next time. Cheers!
+So, that\'s all for now I guess. Writing all of this was fun, and I hope to not destroy this way before I could have a chance to be greeted by the curtains itself! Come one guys, you know it all, there\'s no need to downplay it this early ;) On that note, I\'ll end my talk here. Until next time. Cheers!
