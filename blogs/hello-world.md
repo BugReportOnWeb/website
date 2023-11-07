@@ -9,23 +9,17 @@ What could be a better way to greet you all? Welcome to my first blog! This is w
 
 As this is my very first blog, I\'ll try to keep it short. Some of the things I\'d like to discuss are what you can expect from these blogs and what else I have in my mind for the curve to take a shape as it goes.
 
-&nbsp;
-
 ### Is there a specific genre? 
 
 Even though I\'m a techie, It surely isn\'t a tech all-around pitstop, but rather a place for me to express myself and share my thoughts. No worries, I won\'t keep on with the rants, but focus more onto clearing and sharing something that I would like to have engraved on the girthy wires of the internet. Does that sound like something one should be more concerned about? It certainly does to me as I write this, but there\'s no turning back now.
 
 While I say it's not all tech, it doesn\'t mean that it has 0% hold of the stake. In fact the very next blog or the one after that will likely be tech-related. So yeah, it\'s all what I would like to share, regardless of the genre.
 
-&nbsp;
-
 ### Sounds like journaling, doesn't it?
 
 Saying all this does make it lowkey related to journaling, but I guess it isn\'t, believe me, I don\'t lie that often unless it\'s the only choice in hand. It\'s just a medium to share things with you all. I have no idea who you all could be, but if it\'s just me, I\'m sure he\'s gonna have a good time revisiting the bend in the new arc again :)
 
 Other than that, maybe I\'d like to have a special place for all of them. Who are 'them' you ask? Well, it's just a matter of time before I open that vault and let it out. But let me warn you! Take my words with a grain of salt. I'm too laz... I mean "busy" to implement new features in here, and that should be evident to those who already know me :p
-
-&nbsp;
 
 ### Now what?
 
