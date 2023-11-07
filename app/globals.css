@@ -59,10 +59,11 @@ body {
     font-weight: bold;
 }
 
+/* maring-top: 1em (default) */
 .parsedown h3 {
     display: block;
     font-size: 1.17em;
-    margin-top: 1em;
+    margin-top: 2em;
     margin-bottom: 1em;
     margin-left: 0;
     margin-right: 0;
