@@ -1,7 +1,7 @@
-// import Footer from "@/components/Footer";
+import Link from "next/link";
+
 import Date from "@/components/Date";
 import { getSortedBlogsMetaData } from "@/lib/blogs";
-import Link from "next/link";
 
 // Possible other colors (hover: lighter -> darker):
 // #06101A
@@ -25,7 +25,7 @@ const Blogs = () => {
                     </Link>
                 ))}
             </div>
-            {/* <Footer component='blog' /> */}
+            {/* TODO: Add Footer */}
         </div>
     )
 }

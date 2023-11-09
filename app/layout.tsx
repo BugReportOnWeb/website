@@ -8,23 +8,23 @@ const inter = Inter({
 })
 
 export const metadata = {
-  title: 'Dev Kaul',
-  description: 'Personal website of Dev Kaul',
+    title: 'Dev Kaul',
+    description: 'Personal website of Dev Kaul',
 }
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
-  return (
-    <html lang="en">
-      <body className={inter.className}>
-        <div className='relative max-w-6xl h-screen mx-auto'>
-            <Nav />
-            {children}
-        </div>
-      </body>
-    </html>
-  )
+interface RootLayoutProps {
+    children: React.ReactNode
+}
+
+export default function RootLayout({ children }: RootLayoutProps) {
+    return (
+        <html lang="en">
+            <body className={inter.className}>
+                <div className='relative max-w-6xl h-screen mx-auto'>
+                    <Nav />
+                    {children}
+                </div>
+            </body>
+        </html>
+    )
 }

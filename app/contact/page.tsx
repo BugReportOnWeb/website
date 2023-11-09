@@ -1,11 +1,10 @@
 "use client"
 
 import { useState } from 'react';
+import { FaTelegramPlane, FaDiscord } from 'react-icons/fa';
+
 import Footer from '@/components/Footer';
 import ContactForm from '@/components/ContactForm';
-
-// Icons
-import { FaTelegramPlane, FaDiscord } from 'react-icons/fa';
 
 const Contact = () => {
     const [usernameCopied, setUsernameCopied] = useState<boolean>(false);
