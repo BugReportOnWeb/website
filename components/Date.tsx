@@ -7,7 +7,7 @@ interface DateProps {
 
 const Date = ({ className, dateString }: DateProps) => {
     const date = parseISO(dateString);
-    
+
     return (
         <time className={className} dateTime={dateString}>
             {format(date, 'dd LLLL yyyy')}
