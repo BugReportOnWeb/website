@@ -49,7 +49,7 @@ const getBlogMetaData = (id: string) => {
     return blogMetaData;
 }
 
-// Get specific blog markdown content
+// Get specific blog HTML content
 const getBlogContent = async (id: string) => {
     const filePath = path.join(blogsDirectoryPath, `${id}.md`);
     const fileContent = fs.readFileSync(filePath, 'utf8');
