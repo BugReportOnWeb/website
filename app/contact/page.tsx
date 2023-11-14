@@ -9,9 +9,8 @@ import ContactForm from '@/components/ContactForm';
 const Contact = () => {
     const [usernameCopied, setUsernameCopied] = useState<boolean>(false);
 
-    const copyUsername = () => {
-        navigator.clipboard.writeText("devkaul");
-
+    const copyUsername = async () => {
+        await navigator.clipboard.writeText("devkaul");
         setUsernameCopied(true);
         setTimeout(() => setUsernameCopied(false), 1800);
     }
