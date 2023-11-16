@@ -9,11 +9,10 @@ const Home = () => {
         <div className='h-full pt-[6.75rem] sm:flex sm:justify-center sm:items-center sm:pt-0'>
             <div className='relative max-w-sm mx-auto flex flex-col px-5 pb-7 justify-center items-center gap-8 sm:static sm:flex-row-reverse sm:items-start sm:pb-0 sm:max-w-2xl sm:gap-7'>
                 <Image
-                    height={170}
-                    width={170}
-                    className='rounded-full'
+                    priority={true}
+                    placeholder="blur"
+                    className='w-40 h-40 rounded-full'
                     src={profileImage}
-                    placeholder="empty"
                     alt="Picture of the Dev"
                 />
                 <div>
