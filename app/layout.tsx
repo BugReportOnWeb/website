@@ -1,6 +1,7 @@
 import './globals.css'
 import { Inter } from 'next/font/google'
 import Nav from '@/components/Nav';
+import Script from 'next/script';
 
 const inter = Inter({
     subsets: ['latin'],
@@ -25,6 +26,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
                     {children}
                 </div>
             </body>
+            <Script data-goatcounter="https://devkaul.goatcounter.com/count" async src="//gc.zgo.at/count.js" />
         </html>
     )
 }
