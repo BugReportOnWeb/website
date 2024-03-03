@@ -16,6 +16,11 @@ const ContactForm = () => {
         }} ref={formRef} className='w-full flex flex-col justify-center gap-5'>
             <a href={`mailto:${EMAIL}`} className='w-fit text-start flex items-center'><BiSolidRightArrow className='mr-2' />{EMAIL}</a>
             <input
+                type="text" 
+                name="honeypot"
+                className='hidden'
+            />
+            <input
                 type='text'
                 name='name'
                 required

@@ -11,6 +11,9 @@ const sendMail = async (formData: FormData) => {
     const name = formData.get('name');
     const email = formData.get('email');
     const message = formData.get('message');
+    const honeypot = formData.get('honeypot')
+
+    if (honeypot) return;
 
     const newMessage = `'${name}' wrote - ${message}`;
 
