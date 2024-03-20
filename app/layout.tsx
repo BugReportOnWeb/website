@@ -21,7 +21,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
     return (
         <html lang="en">
             <body className={inter.className}>
-                <div className='relative max-w-6xl h-screen mx-auto'>
+                <div className='relative max-w-2xl h-screen mx-auto'>
                     <Nav />
                     {children}
                 </div>
