@@ -26,11 +26,11 @@ const Contact = () => {
                     </button>
                 </div>
                 <div className='relative w-full border border-[#242F2B]'>
-                    <div className='absolute border border border-[#242F2B] flex justify-center items-center px-3 py-1 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-xl text-xs text-white/70 bg-black'>OR</div>
+                    <div className='absolute border border-[#242F2B] flex justify-center items-center px-3 py-1 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-xl text-xs text-white/70 bg-black'>OR</div>
                 </div>
                 <ContactForm />
             </div>
-            <Footer component='contact' />
+            <Footer />
         </div>
     )
 }
