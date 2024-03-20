@@ -1,31 +1,43 @@
 import Image from "next/image";
 import Script from "next/script";
-import { AiFillGithub, AiOutlineTwitter } from "react-icons/ai";
-
-import Footer from "@/components/Footer";
 import profileImage from '@/public/profile.png';
-
+import ProjectCard from "@/components/ProjectCard";
+import projects from "@/lib/projects";
+import Footer from "@/components/Footer";
 
 const Home = () => {
     return (
         <>
-            <div className='h-full pt-[6.75rem] sm:flex sm:justify-center sm:items-center sm:pt-0'>
-                <div className='relative max-w-sm mx-auto flex flex-col px-5 pb-7 justify-center items-center gap-8 sm:static sm:flex-row-reverse sm:items-start sm:pb-0 sm:max-w-2xl sm:gap-7'>
-                    <Image
-                        priority={true}
-                        placeholder="blur"
-                        className='w-40 h-40 rounded-full'
-                        src={profileImage}
-                        alt="My picture (Dev) :)"
-                    />
-                    <div>
-                        <p className='leading-8'>Hey! I&apos;m Dev, a hobbyist developer from Shimla. This is my corner of the web. I code for fun, creating silly scripts and web apps, and diving into all things tech before 2092. Oh, and music? It&apos;s my true passion and brings me so much joy! Feel free to wander around and check out my work and stuff :)
-                        </p>
-                        <div className='mt-7 text-xs flex flex-col justify-around gap-3 sm:flex-row'>
-                            <a className='bg-[#f8fafc] font-medium text-[#020205] w-full h-10 rounded-md flex justify-center items-center cursor-pointer transition-colors ease-in-out hover:bg-[#f8fafc]/90' href='https://github.com/BugReportOnWeb' target='_blank'><span><AiFillGithub className='mr-2 text-xl' /></span>GitHub</a>
-                            <a className='bg-[#f8fafc] font-medium text-[#020205] w-full h-10 rounded-md flex justify-center items-center cursor-pointer transition-colors ease-in-out hover:bg-[#f8fafc]/90' href='https://twitter.com/devkaul0' target='_blank'><span><AiOutlineTwitter className='mr-2 text-xl' /></span>Twitter</a>
+            <div className='h-full pt-[4.75rem] sm:pt-[5.75rem]'>
+                <div className='px-4 flex flex-col gap-8'>
+                    {/* Hero section */}
+                    <div className='flex flex-row-reverse items-center gap-8'>
+                        <Image
+                            priority={true}
+                            placeholder="blur"
+                            className='w-28 h-28 rounded-full hidden sm:block'
+                            src={profileImage}
+                            alt="My picture (Dev) :)"
+                        />
+
+                        <div className='text-sm flex flex-col gap-3.5 leading-[26px]'>
+                            <h1 className='font-bold text-2xl'>Hi, I&apos;m Dev</h1>
+                            <p>I&apos;m a hobbyist developer from Shimla and this is my corner of the web :)</p>
+                            <p>I code for fun, creating silly scripts and web apps, and diving into all things tech before 2092. Oh, and music? It&apos;s my true passion and brings me so much joy!</p>
+                            <p>Feel free to wander around and check out my work and stuff!</p>
                         </div>
                     </div>
+
+                    {/* Project section */}
+                    <div className=''>
+                        <h1 className='font-bold text-lg mb-3.5'>Projects</h1>
+                        <div className='grid sm:grid-cols-2 gap-3.5'>
+                            {projects.map(project => (
+                                <ProjectCard key={project.id} project={project} />
+                            ))}
+                        </div>
+                    </div>
+
                     <Footer />
                 </div>
             </div>
