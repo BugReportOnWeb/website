@@ -16,8 +16,8 @@ const Contact = () => {
     }
 
     return (
-        <div className='h-full pt-[6.75rem] sm:flex sm:justify-center sm:items-center sm:pt-5'>
-            <div className='mx-auto flex pb-7 px-5 flex-col justify-center items-center w-[26rem] gap-10'>
+        <div className='h-full pt-[6.75rem] px-4'>
+            <div className='mx-auto flex pb-7 flex-col justify-center items-center max-w-[26rem] gap-10'>
                 <div className='w-full flex items-start gap-5'>
                     <a href='https://t.me/devkaul' target='_blank' className='text-sm border border-[#242F2B] w-full px-5 py-3 rounded-md flex justify-center items-center cursor-pointer transition-colors ease-in-out bg-transparent hover:bg-[#27272a]'><span><FaTelegramPlane className='mr-2 text-xl' /></span>Telegram</a>
                     <button onClick={copyUsername} className='relative text-sm border border-[#242F2B] w-full px-5 py-3 rounded-md flex justify-center items-center cursor-pointer transition-colors ease-in-out bg-transparent hover:bg-[#27272a] hover:cursor-copy'>
