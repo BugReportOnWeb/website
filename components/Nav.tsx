@@ -16,7 +16,7 @@ const Nav = () => {
     const pathname = usePathname();
 
     return (
-        <div className='absolute top-0 left-0 right-0 px-5 py-6 flex justify-between items-center'>
+        <div className='absolute top-0 left-0 right-0 px-4 py-5 flex justify-between items-center'>
             <Link className='font-bold uppercase' href='/'>Dev Kaul</Link>
 
             <DropdownMenu>
@@ -36,7 +36,7 @@ const Nav = () => {
                 </DropdownMenuContent>
             </DropdownMenu>
 
-            <ul className='items-center text-sm font-medium hidden sm:flex gap-6'>
+            <ul className='items-center text-sm font-medium hidden sm:flex gap-5'>
                 <Link className={`${pathname === '/' ? 'text-[#e1e7ef]' : 'text-[#ededed]/60'} cursor-pointer transition-colors ease-in-out hover:text-[#ededed]/80`} href='/'>Home</Link>
                 <Link className={`${pathname === '/blog' ? 'text-[#e1e7ef]' : 'text-[#ededed]/60'} cursor-pointer transition-colors ease-in-out hover:text-[#ededed]/80`} href='/blog'>Blog</Link>
                 <Link className={`${pathname === '/contact' ? 'text-[#e1e7ef]' : 'text-[#ededed]/60'} cursor-pointer transition-colors ease-in-out hover:text-[#ededed]/80`} href='/contact'>Contact</Link>
