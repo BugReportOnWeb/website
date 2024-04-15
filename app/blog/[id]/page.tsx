@@ -4,11 +4,24 @@ import {
     getBlogContent,
     getBlogMetaData
 } from "@/lib/blogs";
+import { Metadata } from "next";
 
 interface BlogProps {
     params: {
         id: string;
     };
+}
+
+const generateMetadata = ({ params }: BlogProps) => {
+    const blogMetaData = getBlogMetaData(params.id);
+
+    const metaData: Metadata = {
+        title: blogMetaData.title,
+        description: blogMetaData.description,
+        authors: [{ name: "Dev" }]
+    }
+
+    return metaData;
 }
 
 const generateStaticParams = () => {
@@ -42,5 +55,5 @@ const Blog = async ({ params }: BlogProps) => {
     )
 }
 
-export { generateStaticParams }
+export { generateStaticParams, generateMetadata }
 export default Blog;

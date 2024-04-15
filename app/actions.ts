@@ -19,7 +19,7 @@ const sendMail = async (formData: FormData) => {
 
     try {
         // TODO: Make a react template for the message
-        // CHECK: Correct way to typecase 'as string'?
+        // TEST: Correct way to typecase 'as string'?
         const res = await resend.emails.send({
             from: 'Website contact form <onboarding@resend.dev>',
             to: RECEIVER_EMAIL as string,

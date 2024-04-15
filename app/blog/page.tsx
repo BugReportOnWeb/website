@@ -25,7 +25,6 @@ const Blogs = () => {
                     </Link>
                 ))}
             </div>
-            {/* TODO: Add Footer */}
         </div>
     )
 }
