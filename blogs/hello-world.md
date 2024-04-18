@@ -1,8 +1,9 @@
 ---
 title: 'Hello World!'
-date: '2023-09-12'
 description: 'Entering the space with my first blog! Just sharing some thoughts from my mind. Watch out though, there might be someone hiding there.'
+date: '2023-09-12'
 time: '03:45 am'
+tags: ['Thoughts']
 ---
 
 What could be a better way to greet you all? Welcome to my first blog! This is where it all starts, probably would end somewhere down the line, can\'t see, can\'t take into notice, but whenever it may be, it\'s sure to be a blast! ;)

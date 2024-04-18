@@ -1,8 +1,9 @@
 ---
-description: "Let me take you to a journey I had been chasing all this time. You might have crossed the path many times, but now we will observe it"
 title: 'Minimalism'
+description: "Let me take you to a journey I had been chasing all this time. You might have crossed the path many times, but now we will observe it"
 date: '2023-12-22'
 time: '5:01 PM'
+tags: ['Thoughts', 'Design']
 ---
 
 I like minimalism a lot. It helps to navigate the environment in a much clearer and better way. The easiness that comes with it, and the pretty neat outlook of everything is something that keeps me at peace. Many of you might feel the same. Some of you would keep your working station as clean as possible, keeping your tech space as aligned as possible.

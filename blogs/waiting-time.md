@@ -1,8 +1,9 @@
 ---
 title: 'Waiting Time'
-date: '2024-04-18'
 description: 'When the sky was heavy and water seems dark, get through the waves, never expecting to have a mark.'
+date: '2024-04-18'
 time: '07:30 pm'
+tags: ['Thoughts', 'ShitPost']
 ---
 
 > Putting your thoughts on a piece of paper, you may wonder why, but believe me, you will surely get past the level of change in your actions and emotions.
