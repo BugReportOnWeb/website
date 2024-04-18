@@ -118,3 +118,14 @@ body {
 .parsedown code {
     font-family: monospace;
 }
+
+.parsedown blockquote {
+  display: block;
+  padding-top: 0.3em;
+  padding-bottom: 0.3em;
+  padding-left: 40px;
+  padding-right: 40px;
+  color: gray;
+  border-left: 2px solid gray;
+  font-style: italic;
+}
