@@ -65,9 +65,25 @@ const getBlogContent = async (id: string) => {
     return { htmlContent };
 }
 
+const getBlogTags = (blogsMetaData: MetaData[]) => {
+    const allTags = blogsMetaData.map(metaData => metaData.tags);
+    const allDistinctTags = ['#All'];
+
+    allTags.forEach(tagList => {
+        tagList.forEach(tag => {
+            if (!allDistinctTags.includes(`#${tag}`)) {
+                allDistinctTags.push(`#${tag}`);
+            }
+        })
+    })
+
+    return allDistinctTags;
+}
+
 export {
     getSortedBlogsMetaData,
     getAllBlogIds,
     getBlogMetaData,
-    getBlogContent
+    getBlogContent,
+    getBlogTags
 };
