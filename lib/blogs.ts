@@ -67,12 +67,12 @@ const getBlogContent = async (id: string) => {
 
 const getBlogTags = (blogsMetaData: MetaData[]) => {
     const allTags = blogsMetaData.map(metaData => metaData.tags);
-    const allDistinctTags = ['#All'];
+    const allDistinctTags = ['All'];
 
     allTags.forEach(tagList => {
         tagList.forEach(tag => {
-            if (!allDistinctTags.includes(`#${tag}`)) {
-                allDistinctTags.push(`#${tag}`);
+            if (!allDistinctTags.includes(tag)) {
+                allDistinctTags.push(tag);
             }
         })
     })
