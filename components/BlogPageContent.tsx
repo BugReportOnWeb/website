@@ -28,7 +28,7 @@ const BlogPageContent = ({ blogTags, blogsMetaData }: BlogPageContentProps) => {
                 {currentTag === 'All' ? (
                     <>
                         {blogsMetaData.map(metaData => (
-                            <Link href={`/blog/${metaData.id}`} key={metaData.id} className='w-full p-6 border border-[#27272A] rounded-lg flex flex-col justify-center items-start gap-3 sm:p-9 hover:bg-[#050F19]'>
+                            <Link href={`/blogs/${metaData.id}`} key={metaData.id} className='w-full p-6 border border-[#27272A] rounded-lg flex flex-col justify-center items-start gap-3 sm:p-9 hover:bg-[#050F19]'>
                                 <div>
                                     <h1 className='font-bold text-2xl text-[#ededed]'>{metaData.title}</h1>
                                     <Date className='text-xs mt-[0.425rem] text-[#ededed]/40' dateString={metaData.date} />
@@ -42,7 +42,7 @@ const BlogPageContent = ({ blogTags, blogsMetaData }: BlogPageContentProps) => {
                         {blogsMetaData
                             .filter(metadata => metadata.tags.includes(currentTag))
                             .map(metaData => (
-                                <Link href={`/blog/${metaData.id}`} key={metaData.id} className='w-full p-6 border border-[#27272A] rounded-lg flex flex-col justify-center items-start gap-3 sm:p-9 hover:bg-[#050F19]'>
+                                <Link href={`/blogs/${metaData.id}`} key={metaData.id} className='w-full p-6 border border-[#27272A] rounded-lg flex flex-col justify-center items-start gap-3 sm:p-9 hover:bg-[#050F19]'>
                                     <div>
                                         <h1 className='font-bold text-2xl text-[#ededed]'>{metaData.title}</h1>
                                         <Date className='text-xs mt-[0.425rem] text-[#ededed]/40' dateString={metaData.date} />

@@ -27,7 +27,7 @@ const Nav = () => {
                     <Link href='/' className={pathname == '/' ? 'text-[#e1e7ef]' : 'text-[#e1e7ef]/60'}>
                         <DropdownMenuItem>Home</DropdownMenuItem>
                     </Link>
-                    <Link href='/blog' className={pathname == '/blog' ? 'text-[#e1e7ef]' : 'text-[#e1e7ef]/60'}>
+                    <Link href='/blogs' className={pathname == '/blogs' ? 'text-[#e1e7ef]' : 'text-[#e1e7ef]/60'}>
                         <DropdownMenuItem>Blog</DropdownMenuItem>
                     </Link>
                     <Link href='/contact' className={pathname == '/contact' ? 'text-[#e1e7ef]' : 'text-[#e1e7ef]/60'}>
@@ -38,7 +38,7 @@ const Nav = () => {
 
             <ul className='items-center text-sm font-medium hidden sm:flex gap-5'>
                 <Link className={`${pathname === '/' ? 'text-[#e1e7ef]' : 'text-[#ededed]/60'} cursor-pointer transition-colors ease-in-out hover:text-[#ededed]/80`} href='/'>Home</Link>
-                <Link className={`${pathname === '/blog' ? 'text-[#e1e7ef]' : 'text-[#ededed]/60'} cursor-pointer transition-colors ease-in-out hover:text-[#ededed]/80`} href='/blog'>Blog</Link>
+                <Link className={`${pathname === '/blogs' ? 'text-[#e1e7ef]' : 'text-[#ededed]/60'} cursor-pointer transition-colors ease-in-out hover:text-[#ededed]/80`} href='/blogs'>Blogs</Link>
                 <Link className={`${pathname === '/contact' ? 'text-[#e1e7ef]' : 'text-[#ededed]/60'} cursor-pointer transition-colors ease-in-out hover:text-[#ededed]/80`} href='/contact'>Contact</Link>
             </ul>
         </div>
