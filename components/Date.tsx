@@ -10,7 +10,7 @@ const Date = ({ className, dateString }: DateProps) => {
 
     return (
         <time className={className} dateTime={dateString}>
-            {format(date, 'dd LLLL yyyy')}
+            {format(date, 'dd MMM yyyy')}
         </time>
     )
 }

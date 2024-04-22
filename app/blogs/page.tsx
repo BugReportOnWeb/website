@@ -6,7 +6,7 @@ const Blogs = () => {
     const blogTags = getBlogTags(blogsMetaData);
 
     return (
-        <div className='h-full flex justify-center'>
+        <div className='h-full pt-[4.75rem] sm:pt-[5.75rem] flex justify-center'>
             {/* 
                 NOTE: Did this cause using "use client" (for currentTag state) on this
                 page crashed the 'fs' and other imports from 'getSortedBlogsMetaData'
