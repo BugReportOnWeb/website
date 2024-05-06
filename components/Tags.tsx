@@ -6,7 +6,7 @@ type TagsProps = {
 
 const Tags = ({ tags, currentTag, setCurrentTag }: TagsProps) => {
     return (
-        <div className="flex gap-3 pb-4 border-b border-[#e1e7ef]/40 w-fit overflow-x-scroll sm:pb-2">
+        <div className="flex gap-3 pb-4 border-b border-[#e1e7ef]/40 w-fit overflow-x-scroll">
             {tags.map((tag, index) => (
                 <button
                     key={index}
