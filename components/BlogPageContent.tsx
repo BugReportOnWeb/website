@@ -1,18 +1,17 @@
 "use client"
 
-import { MetaData } from "@/types/Blog";
 import Tags from "./Tags";
 import { useState } from "react";
 import Footer from "./Footer";
 import BlogCard from "./BlogCard";
+import { BlogPost } from "@/lib/blogs";
 
 type BlogPageContentProps = {
-    // HACK: Appending 'id' field in 'MetaData' type
-    blogsMetaData: (MetaData & { id: string })[];
+    blogPosts: BlogPost[];
     blogTags: string[];
 }
 
-const BlogPageContent = ({ blogTags, blogsMetaData }: BlogPageContentProps) => {
+const BlogPageContent = ({ blogTags, blogPosts }: BlogPageContentProps) => {
     const [currentTag, setCurrentTag] = useState('All');
 
     return (
@@ -21,16 +20,16 @@ const BlogPageContent = ({ blogTags, blogsMetaData }: BlogPageContentProps) => {
             <div className="flex flex-col justify-center items-center gap-5 mb-2 sm:gap-7">
                 {currentTag === 'All' ? (
                     <>
-                        {blogsMetaData.map(metaData => (
-                            <BlogCard key={metaData.id} metaData={metaData} />
+                        {blogPosts.map(post => (
+                            <BlogCard key={post.slug} post={{ metadata: post.metadata, slug: post.slug }} />
                         ))}
                     </>
                 ) : (
                     <>
-                        {blogsMetaData
-                            .filter(metadata => metadata.tags.includes(currentTag))
-                            .map(metaData => (
-                                <BlogCard key={metaData.id} metaData={metaData} />
+                        {blogPosts
+                            .filter(post => post.metadata.tags.includes(currentTag))
+                            .map(post => (
+                                <BlogCard key={post.slug} post={{ metadata: post.metadata, slug: post.slug }} />
                             ))
                         }
                     </>

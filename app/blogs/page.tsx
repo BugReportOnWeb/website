@@ -1,9 +1,9 @@
-import { getBlogTags, getSortedBlogsMetaData } from "@/lib/blogs";
 import BlogPageContent from "@/components/BlogPageContent";
+import { getBlogPosts, getBlogTags } from "@/lib/blogs";
 
 const Blogs = () => {
-    const blogsMetaData = getSortedBlogsMetaData();
-    const blogTags = getBlogTags(blogsMetaData);
+    const blogPosts = getBlogPosts();
+    const blogTags = getBlogTags(blogPosts);
 
     return (
         <div className='h-full pt-[4.75rem] sm:pt-[5.75rem] flex justify-center'>
@@ -11,7 +11,7 @@ const Blogs = () => {
                 NOTE: Did this cause using "use client" (for currentTag state) on this
                 page crashed the 'fs' and other imports from 'getSortedBlogsMetaData'
             */}
-            <BlogPageContent blogTags={blogTags} blogsMetaData={blogsMetaData} />
+            <BlogPageContent blogTags={blogTags} blogPosts={blogPosts} />
         </div>
     )
 }
