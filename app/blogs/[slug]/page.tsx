@@ -21,7 +21,6 @@ const generateMetadata = ({ params }: BlogParamsProps) => {
     } = post.metadata
 
     let ogImage = `https://devkaul.vercel.app/og?title=${encodeURIComponent(title)}`;
-    console.log(ogImage);
 
     return {
         title,
@@ -66,7 +65,7 @@ const Blog = async ({ params }: BlogParamsProps) => {
     }
 
     return (
-        <div className='h-full flex justify-center'>
+        <>
             {/* TODO: Learn what does this do? */}
             <script
                 type="application/ld+json"
@@ -89,27 +88,29 @@ const Blog = async ({ params }: BlogParamsProps) => {
                 }}
             />
 
-            {/* TODO: Add a back button? */}
-            <div className='w-full px-6 pb-24 max-w-3xl absolute mt-24 sm:mt-36'>
-                <div className='flex flex-col gap-3'>
-                    <h1 className='font-extrabold text-[2.625rem] text-[#ededed]'>{post?.metadata.title}</h1>
-                    <div>
-                        <p>
-                            <Date className='text-sm text-[#ededed]/60' dateString={post.metadata.date} />
-                            <span className='text-sm text-[#ededed]/60'> at {post.metadata.time}</span>
-                        </p>
+            <div className='h-full flex justify-center'>
+                {/* TODO: Add a back button? */}
+                <div className='w-full px-6 pb-24 max-w-3xl absolute mt-24 sm:mt-36'>
+                    <div className='flex flex-col gap-3'>
+                        <h1 className='font-extrabold text-[2.625rem] text-[#ededed]'>{post.metadata.title}</h1>
+                        <div>
+                            <p>
+                                <Date className='text-sm text-[#ededed]/60' dateString={post.metadata.date} />
+                                <span className='text-sm text-[#ededed]/60'> at {post.metadata.time}</span>
+                            </p>
+                        </div>
+                        <div className="flex gap-2">
+                            {post.metadata.tags.map((tag, index) => (
+                                <p key={index} className='border border-[#27272A] rounded-md px-2 py-1 w-fit text-xs text-[#ededed]/60 border border-'>#{tag}</p>
+                            ))}
+                        </div>
                     </div>
-                    <div className="flex gap-2">
-                        {post.metadata.tags.map((tag, index) => (
-                            <p key={index} className='border border-[#27272A] rounded-md px-2 py-1 w-fit text-xs text-[#ededed]/60 border border-'>#{tag}</p>
-                        ))}
+                    <div className='mt-7 leading-7'>
+                        <CustomMDX source={post.content} />
                     </div>
-                </div>
-                <div className='mt-7 leading-7'>
-                    <CustomMDX source={post.content} />
                 </div>
             </div>
-        </div>
+        </>
     )
 }
 
