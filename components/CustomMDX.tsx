@@ -78,7 +78,16 @@ function createHeading(level: number) {
         let slug = slugify(children)
         return React.createElement(
             `h${level}`,
-            { id: slug },
+            {
+                id: slug,
+                // TODO: Fix all this styling of levels (margins)
+                className: `
+                    font-bold
+                    ${level === 1 && 'text-3xl'}
+                    ${level === 2 && 'text-2xl mt-[1.5em] mb-[0.83em]'}
+                    ${level === 3 && 'text-xl mt-[2em] mb-[1em]'}
+                `
+            },
             [
                 React.createElement('a', {
                     href: `#${slug}`,
@@ -95,16 +104,29 @@ function createHeading(level: number) {
     return Heading
 }
 
+const Blockquote = ({ children }: { children?: ReactNode }) => {
+    return (
+        <blockquote className='py-5 px-10 my-5 text-zinc-500 border-l-2 border-zinc-500 italic'>
+            {children}
+        </blockquote>
+    )
+}
+
+const Paragraph = ({ children }: { children?: ReactNode }) => {
+    return (
+        <p className='my-3'>{children}</p> 
+    )
+}
+
 let components = {
     h1: createHeading(1),
     h2: createHeading(2),
     h3: createHeading(3),
-    h4: createHeading(4),
-    h5: createHeading(5),
-    h6: createHeading(6),
     // Image: RoundedImage,
     a: CustomLink,
-    code: Code
+    code: Code,
+    blockquote: Blockquote,
+    p: Paragraph
     // Table,
 }
 
