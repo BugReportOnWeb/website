@@ -18,7 +18,7 @@ npm install       # Install project dependencies
 npm run dev       # Start the local server
 ```
 
-The development server will be available at localhost:3000.
+The development server will be available at `http://localhost:3000`.
 
 ## Contributing
 
