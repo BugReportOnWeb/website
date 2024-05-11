@@ -82,62 +82,6 @@ const getBlogPosts = () => {
     return sortedBlogPosts;
 }
 
-// // Get all blogs metadata (sorted)
-// const getSortedBlogsMetaData = () => {
-//     const fileNames = fs.readdirSync(blogsDirectoryPath);
-
-//     const blogsData = fileNames.map(fileName => {
-//         const id = fileName.replace(/\.md$/, '');
-//         const blogMetaData = getBlogMetaData(id);
-
-//         return blogMetaData;
-//     })
-
-//     return blogsData.sort((firstBlog, secondBlog) => {
-//         if (firstBlog.date < secondBlog.date) return 1;
-//         return -1;
-//     });
-// }
-
-// // Get all blog ids
-// const getAllBlogIds = () => {
-//     const fileNames = fs.readdirSync(blogsDirectoryPath);
-
-//     const blogIds = fileNames.map(fileName => {
-//         const id = fileName.replace(/\.md$/, '');
-//         return { id };
-//     })
-
-//     return blogIds;
-// }
-
-// // Get specific blog metadata
-// const getBlogMetaData = (id: string) => {
-//     const filePath = path.join(blogsDirectoryPath, `${id}.md`);
-//     const fileContent = fs.readFileSync(filePath, 'utf8');
-
-//     const matterMetaData = matter(fileContent).data as MetaData;
-//     const blogMetaData = { id, ...matterMetaData };
-
-//     return blogMetaData;
-// }
-
-// // Get specific blog HTML content
-// const getBlogContent = async (id: string) => {
-//     const filePath = path.join(blogsDirectoryPath, `${id}.md`);
-//     const fileContent = fs.readFileSync(filePath, 'utf8');
-
-//     const matterContent = matter(fileContent).content;
-
-//     const rawContent = await remark()
-//         .use(html)
-//         .process(matterContent)
-
-//     const htmlContent = rawContent.toString();
-
-//     return { htmlContent };
-// }
-
 const getBlogTags = (blogPosts: BlogPost[]) => {
     const allTags = blogPosts.map(post => post.metadata.tags);
     const allDistinctTags = ['All'];

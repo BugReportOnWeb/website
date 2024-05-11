@@ -1,4 +1,4 @@
-import { CustomMDX } from "@/components/CustomMDX";
+import CustomMDX from "@/components/CustomMDX";
 import Date from "@/components/Date";
 import { getBlogPosts } from "@/lib/blogs";
 import { notFound } from "next/navigation";
@@ -9,6 +9,7 @@ type BlogParamsProps = {
     };
 }
 
+// TODO: Understand this better
 const generateMetadata = ({ params }: BlogParamsProps) => {
     let post = getBlogPosts().find((post) => post.slug === params.slug)
     if (!post) {
