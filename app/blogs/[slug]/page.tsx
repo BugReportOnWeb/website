@@ -105,7 +105,7 @@ const Blog = async ({ params }: BlogParamsProps) => {
                             ))}
                         </div>
                     </div>
-                    <div className='mt-7 leading-7'>
+                    <div className='mt-7 leading-7 prose'>
                         <CustomMDX source={post.content} />
                     </div>
                 </div>

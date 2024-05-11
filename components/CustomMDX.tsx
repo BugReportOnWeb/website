@@ -114,7 +114,7 @@ const Blockquote = ({ children }: { children?: ReactNode }) => {
 
 const Paragraph = ({ children }: { children?: ReactNode }) => {
     return (
-        <p className='my-3'>{children}</p> 
+        <p className='my-3'>{children}</p>
     )
 }
 
