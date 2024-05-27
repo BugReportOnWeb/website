@@ -28,7 +28,7 @@ const Nav = () => {
                         <DropdownMenuItem>Home</DropdownMenuItem>
                     </Link>
                     <Link href='/blogs' className={pathname == '/blogs' ? 'text-[#e1e7ef]' : 'text-[#e1e7ef]/60'}>
-                        <DropdownMenuItem>Blog</DropdownMenuItem>
+                        <DropdownMenuItem>Blogs</DropdownMenuItem>
                     </Link>
                     <Link href='/contact' className={pathname == '/contact' ? 'text-[#e1e7ef]' : 'text-[#e1e7ef]/60'}>
                         <DropdownMenuItem>Contact</DropdownMenuItem>
