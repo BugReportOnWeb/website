@@ -1,4 +1,6 @@
 import { MDXRemote } from 'next-mdx-remote/rsc'
+import { StaticImport } from 'next/dist/shared/lib/get-img-props'
+import Image from 'next/image'
 import Link from 'next/link'
 import React, { ReactNode } from 'react'
 import { highlight } from 'sugar-high'
@@ -27,15 +29,14 @@ import { highlight } from 'sugar-high'
 //     )
 // }
 //
-// const RoundedImage = (props: {
+// const NextImage = ({ alt, width, height, src, className }: {
 //     alt: string,
 //     width: number | `${number}` | undefined,
 //     height: number | `${number}` | undefined,
 //     src: string | StaticImport,
 //     className: string
 // }) => {
-//     const { alt, className, ...otherProps } = { ...props };
-//     return <Image alt={props.alt} className={`rounded-lg ${props.className}`} {...otherProps} />
+//     return <Image alt={alt} className={`rounded-lg border border-blue-500 ${className}`} width={width} height={height} src={src} />
 // }
 
 const CustomLink = ({ href, children, ...otherProps }: { href?: string, children?: ReactNode }) => {
@@ -120,16 +121,31 @@ const Paragraph = ({ children }: { children?: ReactNode }) => {
     )
 }
 
+const NextImage = ({ src, alt, ...otherProps }: {
+    src?: string | StaticImport,
+    alt?: string
+}) => {
+    return (
+        <Image
+            src={src!}
+            alt={alt!}
+            height={670}
+            width={670}
+            className='my-10 h-[25rem] rounded-lg object-cover'
+            {...otherProps}
+        />
+    )
+}
+
 let components = {
     h1: createHeading(1),
     h2: createHeading(2),
     h3: createHeading(3),
-    // Image: RoundedImage,
+    img: NextImage,
     a: CustomLink,
     code: Code,
     blockquote: Blockquote,
-    p: Paragraph
-    // Table,
+    p: Paragraph,
 }
 
 const CustomMDX = (props: { source: string }) => {
