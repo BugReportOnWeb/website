@@ -14,6 +14,8 @@ import {
 
 const Nav = () => {
     const pathname = usePathname();
+    // NOTE: X-Padding doesn't seem to be aliging with the body
+    // TODO: Analyze and fix the above thing.
 
     return (
         <div className='absolute top-0 left-0 right-0 px-4 py-5 flex justify-between items-center'>
