@@ -1,5 +1,5 @@
 import Image from "next/image";
-import profileImage from '@/public/profile.png';
+import profileImage from '@/public/profile.jpg';
 import ProjectCard from "@/components/ProjectCard";
 import projects from "@/lib/projects";
 import Footer from "@/components/Footer";
